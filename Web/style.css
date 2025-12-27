@@ -1,0 +1,219 @@
+.back {
+    background-color: white;
+  }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  .center {
+            text-align:center;
+        }
+        .background {
+            box-sizing: border-box;
+            background-color: #FACC15;
+            border:2px solid #FBBF24; 
+            position: relative;
+      
+        }
+        .below {
+            box-sizing: border-box;
+            background-color: lightblue;
+            border: darkcyan 2px solid;
+           
+        }
+       
+        .hero {
+            height: 65vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            /* Use a relative path (forward slashes). If the image lives next to your HTML file, this will work:
+               background-image: url("PHOTO-2025-12-25-20-03-33.jpg");
+               If the image is in a subfolder called "images", use: url("images/PHOTO-2025-12-25-20-03-33.jpg");
+               Avoid Windows backslashes in CSS URLs; they break or get interpreted as escapes. */
+            background-image: url("PHOTO-2025-12-25-20-03-31.jpg");
+            background-color: #333; /* fallback color while image loads or if it's missing */
+            background-size: contain;
+            background-position: center ;
+            background-repeat: no-repeat;
+            position: relative;
+            padding: 20px;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset:0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .hero-content {
+            max-width: fit-content;
+            position: relative;
+            z-index: 2;
+        }
+        .card-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .card{
+            flex: 1 1 250px;
+            max-width: 300px;
+            box-sizing: border-box;
+            background-color: white;
+            border: 2px solid #FBBF24; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+        
+        }
+        .nav-bar {
+            display:flex;
+            list-style-type: none;
+            gap: 20px;
+            justify-content: flex-end;
+            margin:0;
+            padding: 0;
+        }
+        .nav-bar li{
+           margin-left: 10px;
+        }
+        .nav-bar a{
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 3px;
+            background-color:#3498db;
+            transition: background-color 0.3s ease;
+            color:white;
+            font-weight: bold;
+        }
+        .nav-menu a:hover {
+  background-color: #2980b9;
+        }
+       
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+    grid-template-rows: auto;
+    max-width:90%;
+    margin:auto;
+    margin:120px auto 0 auto;
+    align-items: stretch;
+    gap: 0; /* remove gap between grid cells */
+   
+}
+.item{
+    color:white;
+    background-color: #3498db;
+    border: 2px solid #2980b9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   font-size: 2rem;
+    font-weight: bold;
+    /* removed margin so items touch the grid edges and neighboring cells */
+}
+.item img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    
+}
+.about-text{
+    padding:20px;
+    font-size:18px;
+    line-height:1.6;
+    text-align: center;
+}
+        
+.page{
+    margin-top:20px;
+    font-size:20px;
+    color:black;
+    text-align: center;
+}
+.school{
+    font-size:50px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-style: Mordern sans-serif;
+    text-align: center;
+}
+/* Title logo styling */
+.site-title {
+    text-align: center;
+    line-height: 1.1;
+    margin: 0;
+}
+.site-title .title-logo {
+    display: block;
+    margin: 10px auto 0;
+    width: 120px; /* adjust size as needed */
+    height: auto;
+}
+
+@media (max-width: 480px) {
+    .site-title .title-logo { width: 80px; }
+}
+/* Contact grid styles (center content vertically & horizontally) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0; /* removed gap as requested */
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0; /* remove inner padding so boxes touch */
+    box-sizing: border-box;
+    align-items: stretch; /* make both columns match row height */
+}
+.contact-info,
+.contact-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical centering */
+    align-items: center;     /* horizontal centering */
+    padding: 24px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.contact-info { color: #111; }
+.contact-info h2 { margin: 0 0 12px 0; font-size: 24px; color: #222; text-align: center; }
+.contact-info p { margin: 8px 0; font-size: 18px; text-align: center; }
+.contact-info a { color: #3498db; text-decoration: none; font-weight: bold; }
+.contact-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 420px; /* optional cap */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 700px) {
+    .contact-grid { grid-template-columns: 1fr; }
+    .contact-image img { max-height: 260px; }
+    .contact-info, .contact-image { text-align: center; align-items: center; }
+}
+
